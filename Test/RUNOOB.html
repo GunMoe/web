@@ -1,0 +1,52 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<metacharset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+	<canvas id="canvas1" width="500px" height="500px" style="border: aqua solid 1px;"></canvas>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>test</title>
+	<script type="text/javascript">
+		function draw(){
+			console.log("test")	;
+			var ctx = document.getElementById("myCanvas").getContext("2d");
+			ctx.font = "bold 20px 黑体";
+			ctx.fillStyle = "Blue";
+			var txt1 = "this iddddddddddds text1";
+			ctx.fillText(txt1,10,40);
+			var txt2 = "top width aaaaaaaaaaaaaaaaaaaa";
+			var mtx1 = ctx.measureText(txt1);
+			var mtx2 = ctx.measureText(txt2);
+			
+			ctx.font = "bold 15px 宋体";
+			ctx.fillStyle = "Red";
+			ctx.strokeText(txt2,10,80);
+			/* ctx.fillText(mtx1.width,mtx2.width,80); */
+			var message = "Holle";
+			// 绘制空心文字
+			ctx.font = "25px 隶书";
+			ctx.lineWidth="10";
+			ctx.strokeStyle = "Green";
+			ctx.strokeText(message,30,130);
+		}
+ 
+		window.onload = function(){
+			draw();
+		}
+	</script>
+</head>
+<body>
+	<div style="background-color: #000000;"></div>
+	<canvas id="myCanvas" width="350" height="200"></canvas>
+</body>
+</html>

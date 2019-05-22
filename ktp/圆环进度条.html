@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			.zyq_context_div{
+				position: relative;
+				width: 355px;
+				height: 192px;
+			}
+			.zyq_progress_div{
+				position: relative;
+				left: 69px;
+				width: 134px;
+				height: 134px;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="width: 1000px; height: 1000px;" >
+			<div class="zyq_context_div">
+				<canvas id="canvas2" width="355px" height="192px" style="position: absolute;"></canvas>
+				<div class="zyq_progress_div">
+					<canvas id="canvas1" width="134px" height="134px"></canvas>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		function init1(){
+			//input
+			var ratio = 92.34;
+			
+			var canvas = document.getElementById("canvas1");
+			console.log(canvas);
+			var ctx = canvas.getContext('2d');
+			centerX = canvas.width/2,
+			centerY = canvas.height/2,
+			console.log("X"+canvas.width+"---"+"Y"+canvas.height);
+			console.log("X"+centerX+"---"+"Y"+centerY);
+			ctx.beginPath();
+			ctx.lineWidth = 2;
+			var rgb=ctx.createLinearGradient(0,0,170,0);
+			rgb.addColorStop("0","#40BFFF");
+			rgb.addColorStop("0.25","#40BFFF");
+			rgb.addColorStop("0.5","#40BFFF");
+			rgb.addColorStop("0.75","#3AA3FA");
+			rgb.addColorStop("1","#3172F2");
+			ctx.strokeStyle = rgb;
+			ctx.arc(centerX, centerY, 65, Math.PI*1.5 ,Math.PI*4.5,false);
+			ctx.stroke();
+			
+			var arc_pi = 1.5+ratio*0.02;
+			ctx.beginPath();
+			ctx.lineWidth = 9;
+			var rgb=ctx.createLinearGradient(0,0,170,0);
+			rgb.addColorStop("0","#40BFFF");
+			rgb.addColorStop("0.25","#40BFFF");
+			rgb.addColorStop("0.5","#40BFFF");
+			rgb.addColorStop("0.75","#3AA3FA");
+			rgb.addColorStop("1","#3172F2");
+			ctx.strokeStyle = rgb;
+			ctx.arc(centerX, centerY, 50, Math.PI*1.5 ,Math.PI*arc_pi,false);
+			ctx.stroke();
+			init2();
+		}
+		function init2(){
+			var canvas = document.getElementById("canvas2");
+			console.log(canvas);
+			var ctx = canvas.getContext('2d');
+			ctx.beginPath();
+			var beginx = 181,beginy = 45;
+			var endx = 217,endy = 7;
+			ctx.moveTo(beginx,beginy);
+			ctx.lineTo(endx,endy);
+			ctx.moveTo(endx,endy);
+			ctx.lineTo(endx+100,endy);
+			ctx.lineWidth = 3;
+			ctx.strokeStyle = "#3792F8";
+			ctx.stroke();
+		}
+		window.load(init1());
+	</script>
+</html>

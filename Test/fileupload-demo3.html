@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function UpladFile() {
+				var fileObj = document.getElementById("file").files[0]; // js 获取文件对象
+				var FileController = "https://l.dounait.cn/ajaxupload"; // 接收上传文件的后台地址 
+
+				// FormData 对象
+				var form = new FormData($("#uploadForm")[0]);
+
+				// XMLHttpRequest 对象
+				var xhr = new XMLHttpRequest();
+				xhr.open("post", FileController, true);
+				xhr.onload = function() {
+					// alert("上传完成!");
+				};
+
+				xhr.upload.addEventListener("progress", progressFunction, false);
+				xhr.send(form);
+			}
+
+			function progressFunction(evt) {
+				var progressBar = document.getElementById("progressBar");
+				var percentageDiv = document.getElementById("percentage");
+				if (evt.lengthComputable) {
+					progressBar.max = evt.total;
+					progressBar.value = evt.loaded;
+					percentageDiv.innerHTML = Math.round(evt.loaded / evt.total * 100) + "%";
+					if (evt.loaded == evt.total) {
+						alert("上传完成100%");
+					}
+				}
+			}
+		</script>
+
+		<br />
+		<br />
+		<br />
+		<br />
+
+		<progress id="progressBar" value="0" max="100"></progress>
+		<span id="percentage"></span>
+
+		<br />
+		<br />
+		<br />
+		<br />
+		<form id="uploadForm">
+
+			<input type="file" id="file" name="myfile" />
+			<input type="button" onclick="UpladFile()" value="上传" />
+
+		</form>
+
+	</body>
+</html>

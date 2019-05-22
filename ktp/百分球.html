@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#wrapper{
+			  position: relative;
+			  height: 200px;
+			  width: 200px;
+			  border-radius: 50%;
+			  border: greenyellow 1px solid;
+			  overflow: hidden;
+			}
+			#balls{
+			  position: relative;
+			  height:100%;
+			  width: 100%;
+			  top: 50%;
+			   overflow: hidden;
+			}
+			#ball1,#ball2,#ball3{
+			  position: absolute;
+			  right: 0;
+			  margin-left: -750%;
+			  height: 1500%;
+			  width: 1500%;
+			  border-radius: 50%;
+			  left: 50%;
+			  background-color: greenyellow;
+			}
+			#ball1{
+			  animation: move 5s 0s infinite ease-in-out;	  
+			}
+			#ball2{
+       animation: move 5s 2s infinite ease-in-out;    
+			}
+			#ball3{
+			  animation: move 5s 4s infinite ease-in-out;
+			}
+			@keyframes move{
+				from{transform: translateX(0%);}
+				to{transform: translateX(0%);}
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<!-- <input type="text" id="num"/><span>%</span>
+			<button id="submit">提交</button> -->
+			<div id="wrapper">
+				<div id="balls">
+					<div id="ball1"></div>
+					<div id="ball2"></div>
+					<div id="ball3"></div>
+				</div>
+			</div>
+		</div>
+		<!-- <script>
+			var elNum = document.querySelector('#num')
+			var elBtn = document.querySelector('#submit')
+			var elBalls = document.querySelector('#balls')
+			elBtn.addEventListener('click', progress, false)
+			function progress () {
+			var num = parseFloat(elNum.value)
+			console.log(num)
+			elBalls.style.top = (100 - num) + '%'
+		}
+		</script> -->
+	</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>circle</title>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+		<style type="text/css">
+			/* *{
+				border:1px solid #d3d3d3;
+			} */
+			#zyq_circle_main{
+				height: 289px;
+				width: 289px;
+				position: relative;
+				background-color: #1B3457;
+			}
+			#zyq_circle1{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image:url(img/circle/10.png);
+				background-repeat: no-repeat;
+				background-position:center; 
+				/* background-position-x: 69.5;
+				background-position-y: 69.5; */
+				/* transform-origin: 70% 70%; */
+				transition: transform 70s ease;
+			}
+			#zyq_circle2{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image:url(img/circle/20.png);
+				background-repeat: no-repeat;
+				background-position:center; 
+				transition: transform 6s ease;
+			}
+			#zyq_circle3{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image:url(img/circle/30.png);
+				background-repeat: no-repeat;
+				background-position:center; 
+				transition: transform 5s ease;
+			}
+			#zyq_circle4{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image:url(img/circle/40.png);
+				background-repeat: no-repeat;
+				background-position:center; 
+				transition: transform 4s ease;
+			}
+			#zyq_circle5{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-image:url(img/circle/50.png);
+				background-repeat: no-repeat;
+				background-position:center; 
+				transition: transform 4s ease;
+			}
+			.spin{
+				transform: rotateZ(108deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zyq_circle_main">
+			<div id="zyq_circle1"></div>
+			<div id="zyq_circle2"></div>
+			<div id="zyq_circle3"></div>
+			<div id="zyq_circle4"></div>
+			<div id="zyq_circle5"></div>
+		</div>
+		
+		<script type="text/javascript">
+				$(function (){
+					console.log("begin");
+					$("#zyq_circle1").css("transform","rotateZ(1800deg)");
+					$("#zyq_circle2").css("transform","rotateZ(1800deg)");
+					$("#zyq_circle3").css("transform","rotateZ(1800deg)");
+					$("#zyq_circle4").css("transform","rotateZ(1800deg)");
+					$("#zyq_circle5").css("transform","rotateZ(1800deg)");
+					console.log("end");
+				})
+		</script>
+	</body>
+</html>

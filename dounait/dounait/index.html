@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">    
+	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+	<meta http-equiv="description" content="This is my page">
+	<meta charset="UTF-8">
+	<title>Test_豆奶</title>
+		
+	<!--标题图标-->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link href="css/dounait_index.css" rel="stylesheet" type="text/css">
+	<!-- jquery cdn -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  </head>
+  
+  <body>
+
+	<!-- HTML表单 -->
+	<form action="login" method="post">
+			<h5 style="color:#00ff00"></h5>
+			<h5 style="color:red;font-size: 17px"></h5>
+			<table>
+				<tr>
+					<td class="right_align">用户名:</td>
+					<td colspan="2"><input type="text" name="uuser" /></td>
+				</tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr>
+					<td class="right_align">密码:</td>
+					<td colspan="2"><input type="password" name="upasswd" /></td>
+				</tr>
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr>
+					<td class="right_align"><input style="width: 20px;" type="checkbox" name="ucookies" value="yes"></td>
+					<td colspan="2"style="font-size: 20px;" >七天内免登陆</td>
+				</tr>
+				<tr>
+					<td><a href="photoServlet.do" style="font-size:17px">游客访问</a></td>
+					<td><input style="width: 100px;padding-left: 0px;" type="submit" value="登陆"></td>
+					
+					<td><a href="web/register.jsp">注册</a></td>
+				</tr>
+			</table>
+		</form>
+		
+		<!--chrome浏览器需加muted属性 会静音  或者F5刷新-->
+		<video  autoplay="autoplay"  poster="https://file.dounait.cn/images/img/wallhaven-673585.png">
+			<source src="https://file.dounait.cn/index.mp4" type="video/mp4">
+		</video>
+		
+  </body>
+</html>
